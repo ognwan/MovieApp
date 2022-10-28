@@ -1,12 +1,19 @@
-<div class="movie-wrapper container d-flex flex-wrap justify-content-between">
-  <div
-    class="movie-card"
-    *ngFor="let movie of movies"
-    [ngStyle]="{
-      'background-image':
-        'url(' + movie.posterUrl + '),' + 'url(' + defaultPoster + ')'
-    }"
-  >
-    <div class="title">{{ movie.title }}</div>
+<div class="container">
+  <br />
+  <div class="featured-movies"><h1>Featured Movies</h1></div>
+  <br />
+  <div class="movie-wrapper d-flex flex-wrap justify-content-between">
+    <div
+      class="movie-card"
+      *ngFor="let movie of movies"
+      [ngStyle]="{
+        'background-image':
+          'url(' + movie.posterUrl + '),' + 'url(' + defaultPoster + ')'
+      }"
+    >
+      <a href="./movie-details/{{ movie.id }}"
+        ><div class="title">{{ movie.title }}</div></a
+      >
+    </div>
   </div>
 </div>

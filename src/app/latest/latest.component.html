@@ -1,1 +1,23 @@
-<p>latest works!</p>
+<div class="container">
+  <br />
+  <div class="featured-movies"><h1>Actors</h1></div>
+  <br />
+  <table class="movie-wrapper table">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Actors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies">
+        <td>
+          {{ movie.title }}
+        </td>
+        <td>
+          {{ movie.actors }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

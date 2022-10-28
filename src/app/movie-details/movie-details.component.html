@@ -1,0 +1,31 @@
+<div *ngIf="movie" id="content_hero" class="center-content hero-ontop">
+  <div class="container">
+    <div class="row blurb scrollme animateme">
+      <div class="col-md-9">
+        <span class="title">{{ movie.genres }}</span>
+        <h1>{{ movie.title }}</h1>
+        <p>
+          {{ movie.plot }}
+        </p>
+        <div class="buttons">
+          <span class="certificate">PG</span>
+          <a
+            href="https://www.youtube.com/watch?v=X0tOpBuYasI"
+            target="”_blank”"
+            data-vbtype="video"
+            class="venobox btn btn-default vbox-item"
+          >
+            <i class="material-icons"></i>
+            <span>Play trailer</span>
+          </a>
+          <button class="btn btn-default">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            Add to favorite
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!movie" class="bg-light">Not Found</div>

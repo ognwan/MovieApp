@@ -11,6 +11,10 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { LatestComponent } from './latest/latest.component';
 import { SearchComponent } from './search/search.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { FooterComponent } from './footer/footer.component';
+import { AllMoviesComponent } from './all-movies/all-movies.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { SearchComponent } from './search/search.component';
     routingComponents,
     LatestComponent,
     SearchComponent,
+    MovieListComponent,
+    MovieDetailsComponent,
+    FooterComponent,
+    AllMoviesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

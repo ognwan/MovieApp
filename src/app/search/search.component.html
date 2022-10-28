@@ -1,1 +1,37 @@
-<p>search works!</p>
+<!-- <div class="movie-wrapper container d-flex flex-wrap justify-content-between">
+  <div
+    class="movie-card"
+    *ngFor="let movie of movies"
+    [ngStyle]="{
+      'background-image':
+        'url(' + movie.posterUrl + '),' + 'url(' + defaultPoster + ')'
+    }"
+  >
+    <div class="title">{{ movie.title }}</div>
+  </div>
+</div> -->
+
+<!-- <app-movie-list [movies]="movies"></app-movie-list> -->
+<div id="movie-card-list">
+  <div class="movie-card" *ngFor="let movie of movies">
+    <div class="movie-content">
+      <img
+        [src]="movie.posterUrl"
+        (error)="onImgError($event)"
+        alt=""
+        width="200px"
+      />
+      <div class="movie-desc">
+        <a href="/movie-detail/{{ movie.title }}"
+          ><h1 class="movie-title">{{ movie.title }}</h1></a
+        >
+        <h4 class="movie-info">
+          {{ "Released " + movie.year + " Genres " + movie.genres }}
+        </h4>
+        <p class="movie-desc">
+          {{ movie.plot }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

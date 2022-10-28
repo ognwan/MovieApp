@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import movieList from '../data/movie';
 
 type MovieType = {
   id: number;
@@ -11,18 +10,18 @@ type MovieType = {
   actors: string;
   plot: string;
   posterUrl: string;
-  isFeatured?: boolean;
 };
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss'],
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrls: ['./movie-list.component.scss'],
 })
-export class MoviesComponent implements OnInit {
+export class MovieListComponent implements OnInit {
+  @Input() movies: MovieType[] = [];
   defaultPoster: string =
     'https://as2.ftcdn.net/v2/jpg/03/15/18/09/1000_F_315180932_rhiXFrJN27zXCCdrgx8V5GWbLd9zTHHA.jpg';
-  movies: MovieType[] = movieList.filter((m) => m.isFeatured);
+  // movies: MovieType[] = movieList;
   constructor() {}
 
   ngOnInit(): void {}
