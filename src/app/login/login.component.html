@@ -1,0 +1,35 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-sm-10">
+    <H2>Login</H2>
+    <form (ngSubmit)="login()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="Username"
+          [(ngModel)]="username"
+          name="username"
+          required
+          minlength="4"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+          name="password"
+          [(ngModel)]="password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <br />
+    <p class="message">{{ message }}</p>
+  </div>
+</div>

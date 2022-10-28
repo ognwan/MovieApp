@@ -1,0 +1,12 @@
+<div class="movie-wrapper container d-flex flex-wrap justify-content-between">
+  <div
+    class="movie-card"
+    *ngFor="let movie of movies"
+    [ngStyle]="{
+      'background-image':
+        'url(' + movie.posterUrl + '),' + 'url(' + defaultPoster + ')'
+    }"
+  >
+    <div class="title">{{ movie.title }}</div>
+  </div>
+</div>
